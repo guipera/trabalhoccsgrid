@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff7f0;
+    color: #333;
+}
+
+header {
+    background-color: #ff7b00;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    min-height: 100vh;
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== IMAGEM PRINCIPAL (90% da largura) ===== */
+.imagem-principal {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    margin: 30px auto;
+    display: block;
+}
+
+/* ===== CONTEÚDO INICIAL ===== */
+.conteudo-inicial {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.item p {
+    margin-top: 10px;
+}
+
+/* ===== GALERIA ===== */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #fff;
+    border: 2px solid #ff7b00;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ===== FORMULÁRIO (GRID) ===== */
+.grid-contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.grid-contato form {
+    display: grid;
+    gap: 15px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #ff7b00;
+}
+
+.grid-contato input,
+.grid-contato textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.grid-contato button {
+    background-color: #ff7b00;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.grid-contato button:hover {
+    background-color: #e76a00;
+}
+
+.imagem-contato {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ===== PAINEL DE FOTOS ===== */
+.painel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.foto {
+    height: 250px;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.f1 { background-image: url("../img/painel1.webp"); }
+.f2 { background-image: url("../img/painel2.webp"); }
+.f3 { background-image: url("../img/painel3.webp"); }
+.f4 { background-image: url("../img/painel4.webp"); }
+.f5 { background-image: url("../img/painel5.webp"); }
+
+footer {
+    background-color: #ff7b00;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.voltar {
+    display: inline-block;
+    margin-top: 40px;
+    color: #ff7b00;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.voltar:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 900px) {
+    .grid-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .imagem-contato {
+        order: -1;
+    }
+
+    .imagem-principal {
+        width: 100%;
+    }
+}
