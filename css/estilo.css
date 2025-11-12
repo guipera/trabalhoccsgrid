@@ -5,6 +5,7 @@ body {
     color: #333;
 }
 
+/* ===== HEADER ===== */
 header {
     background-color: #ff7b00;
     color: white;
@@ -34,6 +35,7 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* ===== SEÇÕES ===== */
 section {
     min-height: 100vh;
     padding: 60px 20px;
@@ -42,13 +44,14 @@ section {
     margin: 0 auto;
 }
 
-/* ===== IMAGEM PRINCIPAL (90% da largura) ===== */
+/* ===== IMAGEM PRINCIPAL (90% ALTURA DA TELA) ===== */
 .imagem-principal {
-    width: 90%;
-    height: auto;
-    border-radius: 10px;
-    margin: 30px auto;
     display: block;
+    margin: 0 auto;
+    height: 90vh;
+    width: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* ===== CONTEÚDO INICIAL ===== */
@@ -93,7 +96,7 @@ section {
     border-radius: 10px;
 }
 
-/* ===== FORMULÁRIO (GRID) ===== */
+/* ===== FORMULÁRIO ===== */
 .grid-contato {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -140,25 +143,33 @@ section {
 /* ===== PAINEL DE FOTOS ===== */
 .painel-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 20px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+@media (min-width: 1000px) {
+    .painel-grid {
+        min-height: 70vh;
+    }
 }
 
 .foto {
-    height: 250px;
     border-radius: 10px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.f1 { background-image: url("../img/painel1.webp"); }
-.f2 { background-image: url("../img/painel2.webp"); }
-.f3 { background-image: url("../img/painel3.webp"); }
-.f4 { background-image: url("../img/painel4.webp"); }
-.f5 { background-image: url("../img/painel5.webp"); }
+.f1 { background-image: url("../img/img1.webp"); }
+.f2 { background-image: url("../img/img6.webp"); }
+.f3 { background-image: url("../img/img4.webp"); }
+.f4 { background-image: url("../img/img10.webp"); }
+.f5 { background-image: url("../img/img3.webp"); }
 
+/* ===== FOOTER ===== */
 footer {
     background-color: #ff7b00;
     color: white;
@@ -190,5 +201,6 @@ footer {
 
     .imagem-principal {
         width: 100%;
+        height: auto;
     }
 }
